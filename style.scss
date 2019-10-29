@@ -1,0 +1,493 @@
+body {
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: #282828;
+    line-height: 1.25;
+    background-color: #E4E5EA;
+  }
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    color: #495653;
+  }
+  @media (min-height: 500px) {
+    .wrapper {
+      width: 70%;
+      min-width: 960px;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #E4E5EA;
+  
+    &:active {
+    color: rgb(255, 255, 255);
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  /*Хедер сайта, Выпадающее меню и анимация гиперссылок*/
+  .page-header {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: rows;
+    justify-content: center;
+    align-items: center;
+    background: url('./img/brooke-lark-wMzx2nBdeng-unsplash.jpg') 0px -400px no-repeat;
+    background-size: 1200px auto;
+    position: relative;
+  }
+  
+  .navigation {
+    width: 200px;
+    height: 400px;
+    background-color: rgb(65, 82, 91);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: fixed;
+    top: -350px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.4s ease-out;
+  }
+  #nav.visible {
+    top: 0;
+  }
+  .navigation-list li {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    position: relative;
+    font-family: 'Roboto Slab', serif;
+
+
+    &:first-child {
+        a {
+            &::after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 73px;
+                top: 55px;
+                right: 17px;
+                background-color: rgb(245, 239, 223);
+                opacity: 0;
+                transition: 0.4s ease;
+                transition-property: opacity, top;
+            }
+            &:hover::after {
+                opacity: 0.9;
+                top: 35px;
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        a {
+            &::after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 70px;
+                top: 55px;
+                right: 19px;
+                background-color: rgb(245, 239, 223);
+                opacity: 0;
+                transition: 0.4s ease;
+                transition-property: opacity, top;
+            }
+
+            &:hover::after {
+                opacity: 0.9;
+                top: 35px;
+            }
+        }
+    }
+    &:last-child {
+        a {
+            &::after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 87px;
+                top: 55px;
+                right: 1px;
+                background-color: rgb(245, 239, 223);
+                opacity: 0;
+                transition: 0.4s ease;
+                transition-property: opacity, top;
+            }
+
+            &:hover::after {
+                opacity: 0.9;
+                top: 35px;
+            }
+        }
+    }
+  }
+ 
+  .social {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    
+    &-instagram {
+        background: url('img/Logo/instagram.png') no-repeat 50% 50%;
+        background-size: contain;
+    }
+
+    &-twitter {
+        background: url('img/Logo/twitter.png') no-repeat 50% 50%;
+        background-size: contain;
+    }
+    &-facebook {
+        background: url('img/Logo/facebook.png') no-repeat 50% 50%;
+        background-size: contain;
+    }
+  }
+
+  .slider-button {
+    margin-bottom: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    background: url('img/Logo/down-arrow.png') no-repeat 50% 50%;
+    background-size: contain;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+
+    &.reversed {
+        transform: rotate(180deg);
+    }
+  }
+  
+  .bakery-name {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3.25rem;
+    margin: 0 auto;
+    top: 120px;
+    letter-spacing: -3px;
+    position: absolute;
+    font-weight: 700;
+  }
+  @media (min-width: 768px) {
+    .bakery-name {
+      margin-left: 0;
+    }
+  }
+  
+  /*Основной контент сайта*/
+ 
+  .quote-container {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  /*2 картинки перед меню*/
+  .interior-container {
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: rows;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+  }
+  .interior-left {
+    width: 100%;
+    height: 600px;
+    background: url('img/lana-graves-jBmsgnhZevQ-unsplash.jpg') no-repeat 50% 50%;
+    background-size: 100% auto;
+    margin-bottom: 15px;
+  }
+  .interior-right {
+    width: 100%;
+    height: 600px;
+    background: url('img/lana-graves-EktH99tipjc-unsplash.jpg') no-repeat 50% 50%;
+    background-size: 100% auto;
+  }
+  @media (min-width: 768px) {
+      .interior-left{
+        width: 40%;
+        margin-bottom: 0;
+        margin-right: 20px;
+        height: 300px;
+      }
+      .interior-right {
+        height: 300px;
+        width: 40%;
+        margin-left: 20px;
+      }
+  }
+  
+  /*Меню*/
+  
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /*flex-wrap: wrap; для 1000+*/
+    justify-content: center;
+    align-content: center;
+
+    h3 {
+        font-family: 'Roboto Slab', serif;
+ 
+    }
+
+    h4 {
+        margin-bottom: -15px;
+    }
+  }
+  @media (min-width: 1330px) {
+    .menu-container {
+      flex-wrap: wrap;
+      max-height: 1800px;
+    }
+  }
+
+  .menu {
+    max-width: 100%;
+  }
+  @media (min-width: 1330px) {
+    .menu {
+      width: 40%;
+    }
+  }
+
+  .menu-sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    outline: 3px solid rgb(245, 239, 223);
+    outline-offset: -8px;
+    margin-bottom: 50px;
+    background-color: rgb(65, 82, 91);
+
+    &-label {
+        color: rgb(245, 239, 223);
+        font-family: 'Roboto Slab', serif;
+
+        font-size: 3rem;
+        text-decoration: underline;
+    }
+  }
+
+  .menu-breakfast {
+    position: relative;
+    padding: 20px;
+    outline: 3px solid rgb(65, 82, 91);
+    outline-offset: -8px;
+    order: 1;
+
+    span {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        letter-spacing: -0.6px;
+        opacity: 0.8;
+        font-size: 1.2rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .menu-breakfast span {
+      font-size: 1.5rem;
+    }
+  }
+
+  .menu-lunch {
+    position: relative;
+    padding: 20px;
+    outline: 3px solid rgb(65, 82, 91);
+    outline-offset: -8px;
+    order: 4;
+
+    span {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        letter-spacing: -0.6px;
+        opacity: 0.8;
+        font-size: 1.2rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .menu-lunch span {
+      font-size: 1.5rem;
+    }
+  }
+  .menu-cakes {
+    padding: 20px;
+    outline: 3px solid rgb(65, 82, 91);
+    outline-offset: -8px;
+    order: 2;
+    /* Маргин для восьмидюймовых тортиков*/
+    .cakes-8-inch {
+        margin-left: 30px;
+    }
+  }
+  .menu-coffee {
+    padding: 20px;
+    outline: 3px solid rgb(65, 82, 91);
+    outline-offset: -8px;
+    order: 3;
+
+    li {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 15px;
+        }
+    }
+  }
+  .coffee-font {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .menu-bread {
+    padding: 20px;
+    outline: 3px solid rgb(65, 82, 91);
+    outline-offset: -8px;
+    order: 5;
+    position: relative;
+
+    span {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        letter-spacing: -0.6px;
+        opacity: 0.8;
+        font-size: 1.2rem;
+    }
+    ul li {
+        h4 {
+            font-size: 1.1rem;
+        }
+
+        &:last-child {
+            margin-bottom: 30px;
+        }
+    }
+  }
+  @media (min-width: 768px) {
+    .menu-bread span {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .menu-pies {
+    padding: 20px;
+    outline: 3px solid rgb(65, 82, 91);
+    outline-offset: -8px;
+    order: 6;
+
+    .pies-large {
+        margin-left: 30px;
+    }
+  }
+  
+  /*2 Картинки внизу главного блока*/
+  .interior-bottom-left {
+    width: 100%;
+    height: 600px;
+    background: url('img/james-harris-RXySkOTi3kk-unsplash.jpg') no-repeat 50% 50%;
+    background-size: 100% auto;
+    margin-bottom: 15px;
+  }
+  .interior-bottom-right {
+    width: 100%;
+    height: 600px;
+    background: url('img/mae-mu-Emhz3miT6mo-unsplash.jpg') no-repeat 50% 50%;
+    background-size: 100% auto;
+  }
+  @media (min-width: 768px) {
+      .interior-bottom-left{
+        width: 40%;
+        margin-bottom: 0;
+        margin-right: 20px;
+        height: 300px;
+      }
+      .interior-bottom-right {
+        height: 300px;
+        width: 40%;
+        margin-left: 20px;
+      }
+  }
+  
+  .map-and-contacts {
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /*flex-direction: row; для 1000+*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .map-container {
+    padding: 10px;
+    height: 400px;
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 10px;
+  }
+  .contacts {
+    width: 100%;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: rgb(65, 82, 91);
+    color: #fff;
+    position: relative;
+    font-family: "Roboto slab", serif;
+
+    .contacts-container {
+      border-top: 2px solid #fff;
+      padding-bottom: 20px;
+
+      .social-container {
+        position: absolute;
+        bottom: 40px;
+        right: 41px;
+      }
+    }
+    h2 {
+      margin: 7px 0;
+    }
+    span {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        right: 40px;
+    }
+  }
+  
+  

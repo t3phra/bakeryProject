@@ -1,0 +1,588 @@
+@charset "UTF-8";
+body {
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #282828;
+  line-height: 1.25;
+  background-color: #E4E5EA;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  color: #495653;
+}
+
+@media (min-height: 500px) {
+  .wrapper {
+    width: 70%;
+    min-width: 960px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #E4E5EA;
+}
+
+a:active {
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+/*Хедер сайта, Выпадающее меню и анимация гиперссылок*/
+.page-header {
+  width: 100%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: rows;
+          flex-direction: rows;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("./img/brooke-lark-wMzx2nBdeng-unsplash.jpg") 0px -400px no-repeat;
+  background-size: 1200px auto;
+  position: relative;
+}
+
+.navigation {
+  width: 200px;
+  height: 400px;
+  background-color: #41525b;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: fixed;
+  top: -350px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+#nav.visible {
+  top: 0;
+}
+
+.navigation-list li {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  position: relative;
+  font-family: 'Roboto Slab', serif;
+}
+
+.navigation-list li:first-child a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 73px;
+  top: 55px;
+  right: 17px;
+  background-color: #f5efdf;
+  opacity: 0;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-transition-property: opacity, top;
+  transition-property: opacity, top;
+}
+
+.navigation-list li:first-child a:hover::after {
+  opacity: 0.9;
+  top: 35px;
+}
+
+.navigation-list li:nth-child(2) a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 70px;
+  top: 55px;
+  right: 19px;
+  background-color: #f5efdf;
+  opacity: 0;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-transition-property: opacity, top;
+  transition-property: opacity, top;
+}
+
+.navigation-list li:nth-child(2) a:hover::after {
+  opacity: 0.9;
+  top: 35px;
+}
+
+.navigation-list li:last-child a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 87px;
+  top: 55px;
+  right: 1px;
+  background-color: #f5efdf;
+  opacity: 0;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-transition-property: opacity, top;
+  transition-property: opacity, top;
+}
+
+.navigation-list li:last-child a:hover::after {
+  opacity: 0.9;
+  top: 35px;
+}
+
+.social {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
+.social-instagram {
+  background: url("img/Logo/instagram.png") no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.social-twitter {
+  background: url("img/Logo/twitter.png") no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.social-facebook {
+  background: url("img/Logo/facebook.png") no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.slider-button {
+  margin-bottom: -20px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  background: url("img/Logo/down-arrow.png") no-repeat 50% 50%;
+  background-size: contain;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.slider-button.reversed {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.bakery-name {
+  font-family: 'Roboto Slab', serif;
+  font-size: 3.25rem;
+  margin: 0 auto;
+  top: 120px;
+  letter-spacing: -3px;
+  position: absolute;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .bakery-name {
+    margin-left: 0;
+  }
+}
+
+/*Основной контент сайта*/
+.quote-container {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+  position: relative;
+}
+
+/*2 картинки перед меню*/
+.interior-container {
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: rows;
+          flex-direction: rows;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0;
+}
+
+.interior-left {
+  width: 100%;
+  height: 600px;
+  background: url("img/lana-graves-jBmsgnhZevQ-unsplash.jpg") no-repeat 50% 50%;
+  background-size: 100% auto;
+  margin-bottom: 15px;
+}
+
+.interior-right {
+  width: 100%;
+  height: 600px;
+  background: url("img/lana-graves-EktH99tipjc-unsplash.jpg") no-repeat 50% 50%;
+  background-size: 100% auto;
+}
+
+@media (min-width: 768px) {
+  .interior-left {
+    width: 40%;
+    margin-bottom: 0;
+    margin-right: 20px;
+    height: 300px;
+  }
+  .interior-right {
+    height: 300px;
+    width: 40%;
+    margin-left: 20px;
+  }
+}
+
+/*Меню*/
+.menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  /*flex-wrap: wrap; для 1000+*/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.menu-container h3 {
+  font-family: 'Roboto Slab', serif;
+}
+
+.menu-container h4 {
+  margin-bottom: -15px;
+}
+
+@media (min-width: 1330px) {
+  .menu-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-height: 1800px;
+  }
+}
+
+.menu {
+  max-width: 100%;
+}
+
+@media (min-width: 1330px) {
+  .menu {
+    width: 40%;
+  }
+}
+
+.menu-sign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  outline: 3px solid #f5efdf;
+  outline-offset: -8px;
+  margin-bottom: 50px;
+  background-color: #41525b;
+}
+
+.menu-sign-label {
+  color: #f5efdf;
+  font-family: 'Roboto Slab', serif;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+
+.menu-breakfast {
+  position: relative;
+  padding: 20px;
+  outline: 3px solid #41525b;
+  outline-offset: -8px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.menu-breakfast span {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  letter-spacing: -0.6px;
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .menu-breakfast span {
+    font-size: 1.5rem;
+  }
+}
+
+.menu-lunch {
+  position: relative;
+  padding: 20px;
+  outline: 3px solid #41525b;
+  outline-offset: -8px;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+
+.menu-lunch span {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  letter-spacing: -0.6px;
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .menu-lunch span {
+    font-size: 1.5rem;
+  }
+}
+
+.menu-cakes {
+  padding: 20px;
+  outline: 3px solid #41525b;
+  outline-offset: -8px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  /* Маргин для восьмидюймовых тортиков*/
+}
+
+.menu-cakes .cakes-8-inch {
+  margin-left: 30px;
+}
+
+.menu-coffee {
+  padding: 20px;
+  outline: 3px solid #41525b;
+  outline-offset: -8px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.menu-coffee li {
+  margin-bottom: 10px;
+}
+
+.menu-coffee li:last-child {
+  margin-bottom: 15px;
+}
+
+.coffee-font {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.menu-bread {
+  padding: 20px;
+  outline: 3px solid #41525b;
+  outline-offset: -8px;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+  position: relative;
+}
+
+.menu-bread span {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  letter-spacing: -0.6px;
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+.menu-bread ul li h4 {
+  font-size: 1.1rem;
+}
+
+.menu-bread ul li:last-child {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .menu-bread span {
+    font-size: 1.5rem;
+  }
+}
+
+.menu-pies {
+  padding: 20px;
+  outline: 3px solid #41525b;
+  outline-offset: -8px;
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+}
+
+.menu-pies .pies-large {
+  margin-left: 30px;
+}
+
+/*2 Картинки внизу главного блока*/
+.interior-bottom-left {
+  width: 100%;
+  height: 600px;
+  background: url("img/james-harris-RXySkOTi3kk-unsplash.jpg") no-repeat 50% 50%;
+  background-size: 100% auto;
+  margin-bottom: 15px;
+}
+
+.interior-bottom-right {
+  width: 100%;
+  height: 600px;
+  background: url("img/mae-mu-Emhz3miT6mo-unsplash.jpg") no-repeat 50% 50%;
+  background-size: 100% auto;
+}
+
+@media (min-width: 768px) {
+  .interior-bottom-left {
+    width: 40%;
+    margin-bottom: 0;
+    margin-right: 20px;
+    height: 300px;
+  }
+  .interior-bottom-right {
+    height: 300px;
+    width: 40%;
+    margin-left: 20px;
+  }
+}
+
+.map-and-contacts {
+  min-height: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*flex-direction: row; для 1000+*/
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.map-container {
+  padding: 10px;
+  height: 400px;
+  width: 100%;
+  background-color: grey;
+  margin-bottom: 10px;
+}
+
+.contacts {
+  width: 100%;
+  padding: 10px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  background-color: #41525b;
+  color: #fff;
+  position: relative;
+  font-family: "Roboto slab", serif;
+}
+
+.contacts .contacts-container {
+  border-top: 2px solid #fff;
+  padding-bottom: 20px;
+}
+
+.contacts .contacts-container .social-container {
+  position: absolute;
+  bottom: 40px;
+  right: 41px;
+}
+
+.contacts h2 {
+  margin: 7px 0;
+}
+
+.contacts span {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+}
+/*# sourceMappingURL=style.css.map */
